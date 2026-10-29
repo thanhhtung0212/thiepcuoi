@@ -64,3 +64,12 @@
 #site .guestbook-flower{width:145px;right:-28px;bottom:-8px;transform:scaleX(-1)}
 #site .gift-floral{width:155px;right:calc(50% - 160px);bottom:8px;transform:none}
 @media(max-width:420px){#site .invitation-panel>.panel-flower-left{width:125px;left:-37px}#site .invitation-panel>.ceremony-floral-bottom{width:130px;right:-25px}#site .reception-panel>.panel-flower-reception{width:145px}#site .timeline-panel>.timeline-flower{width:145px}}
+
+/* AI decor v2 branch: isolated ornamental positions, existing hosted cutouts as fallback. */
+#site .wedding-info{background-image:radial-gradient(circle at 50% 35%,#fffefa 0,#f9f4e9 72%,#f3ecdf 100%)}
+#site .invitation-panel{background:#fcf8ef;border-color:#d3b886}
+#site .wedding-countdown{background:linear-gradient(110deg,#697653,#455339)}
+#site .album-section,#site .gift-section,#site .guestbook-section{background-color:#fbf7ed}
+#site .timeline-panel{background:#fcf8ef!important}
+#site .reception-panel{background:linear-gradient(145deg,#596746,#3e4b34)}
+#site .album-floral-left,#site .album-floral-right,#site .invitation-panel>.panel-flower-left,#site .invitation-panel>.ceremony-floral-bottom,#site .reception-panel>.panel-flower-reception,#site .timeline-panel>.timeline-flower,#site .guestbook-flower,#site .gift-floral{mix-blend-mode:normal;pointer-events:none;filter:none;opacity:1}
