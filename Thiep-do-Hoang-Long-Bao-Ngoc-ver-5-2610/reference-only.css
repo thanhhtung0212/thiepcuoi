@@ -1,0 +1,17 @@
+/* DECOR-ONLY overlay. Based on the eight user-provided reference images.
+   Do not edit main layout, content, image paths, scripts, forms or interactions. */
+:root{--reference-olive:#4b573a;--reference-sage:#727c58;--reference-ivory:#faf6ec;--reference-champagne:#c9ae7b}
+.invitation-shell{background:radial-gradient(ellipse at 50% 22%,#fffdf7 0%,#faf5eb 65%,#f3eddf 100%)}
+.burgundy-panel.invitation-panel{background:radial-gradient(ellipse at center,#fffdf8,#f8f1e4)!important;color:#3e4b35!important;border:1px solid #d1b888!important;border-radius:19px;box-shadow:0 9px 24px #4c503021}
+.invitation-panel .panel-title,.invitation-panel .couple-names,.invitation-panel .family-grid{color:#3e4b35}
+.invitation-panel .panel-flower-left{opacity:1;filter:none}
+.invitation-panel .ceremony-floral-bottom{opacity:1;filter:none}
+.wedding-countdown{background:radial-gradient(ellipse at 30% 10%,#697650,#435039 85%)!important;border:1px solid #b9a477;border-radius:15px;box-shadow:0 8px 21px #404b3335}
+.countdown-unit{background:#f1e8cb20!important;border:1px solid #f6edd226!important;border-radius:8px}
+.album-section{background:radial-gradient(ellipse at center,#fffdf8,#f8f0e4)!important;border:1px solid #e5d7bf;border-radius:18px}
+.album-floral-left,.album-floral-right{opacity:1;filter:none}
+.burgundy-panel.reception-panel{background:radial-gradient(ellipse at 25% 12%,#64724b,#3c4b32 82%)!important;color:#faf3df!important;border:1px solid #c3a877!important;border-radius:16px;box-shadow:0 8px 24px #414c3438}
+.burgundy-panel.timeline-panel{background:radial-gradient(ellipse at center,#fffdf7,#f8f1e5)!important;color:#405039!important;border:1px solid #d4b888!important;border-radius:17px}
+.timeline-panel .panel-title,.timeline-panel li{color:#405039!important}
+.guestbook-section,.gift-section{background:radial-gradient(ellipse at center,#fffdf7,#f8f1e6)!important;border:1px solid #e6d8bf;border-radius:17px}
+.guestbook-flower,.gift-floral,.timeline-flower{opacity:1;filter:none}
