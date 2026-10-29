@@ -150,7 +150,7 @@
 .timeline-panel > .decor-layer {z-index:0;}
 .invitation-panel > :not(.decor-layer):not(.panel-flower):not(.floral-decor),
 .reception-panel > :not(.decor-layer):not(.panel-flower),
-.timeline-panel > :not(.decor-layer):not(.timeline-flower) {
+.timeline-panel > :not(.decor-layer):not(.timeline-flower):not(.timeline-paper) {
   position:relative; z-index:2;
 }
 /* Provisional third layers should not duplicate clipart sheets.
@@ -280,3 +280,9 @@
 /* Shared accessibility: flowers never intercept controls; prevent horizontal overspill. */
 .decor-layer,.floral-decor,.panel-flower{pointer-events:none!important}
 @media(max-width:600px){.invitation-panel>.panel-flower-left{width:31%}.invitation-panel>.ceremony-floral-bottom{width:34%}.wedding-countdown>.countdown-floral{width:27%}.album-section>.album-floral-left,.album-section>.album-floral-right{width:22%}.reception-panel>.panel-flower-reception{width:29%}.timeline-panel>.timeline-flower{width:27%}.guestbook-section>.guestbook-flower{width:22%}.gift-section>.gift-floral{width:24%}}
+
+/* QA FIX 2026-10-30: timeline-paper must stay absolutely positioned.
+   Previous :not(...) selector accidentally changed it to position:relative,
+   making the full-height image participate in layout and pushing schedule
+   heading/items below a huge empty area on mobile. */
+.timeline-panel > .timeline-paper {position:absolute!important;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
