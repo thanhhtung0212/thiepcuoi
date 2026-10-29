@@ -183,3 +183,62 @@
  .decor-layer--album-a,.decor-layer--album-b {width:22%;bottom:-2%;}
  .decor-layer--wishes-a {width:23%;right:-3%;}
 }
+
+
+/* TASK 01 / ENVELOPE — isolated art direction.
+   Uses existing olive envelope, couple photograph and transparent calla bouquet.
+   Preserve JS-driven .is-opening/.is-open animations. No other section changes. */
+.cover {
+  background:
+    radial-gradient(ellipse at 50% 35%, rgba(255,253,247,.86),rgba(250,246,237,.92) 64%,rgba(237,232,217,.8)),
+    #faf6ed;
+}
+.cover .cover-castle {
+  opacity:.075;
+  filter:sepia(.25) saturate(.4);
+}
+.cover .envelope-open {
+  filter:drop-shadow(0 14px 18px rgba(43,52,33,.12));
+}
+.cover .envelope-art {
+  background:linear-gradient(155deg,#6c785c 0%,#48553d 56%,#354332 100%);
+  box-shadow:0 18px 36px rgba(43,52,33,.22),0 2px 4px rgba(43,52,33,.10);
+  isolation:isolate;
+}
+/* Paper-photo: gently lifted and angled, with its existing reveal animation untouched. */
+.cover .envelope-photo-float {
+  left:35%;
+  width:59%;
+  top:-5%;
+}
+.cover .envelope-photo {
+  border-color:#fffdf7;
+  box-shadow:0 9px 19px rgba(39,47,31,.22),0 0 0 1px rgba(197,173,123,.22);
+}
+/* Main white calla arrangement: long vertical drape on the left. */
+.cover .envelope-flower {
+  top:-19%;
+  left:-10%;
+  width:46%;
+  max-width:none;
+  object-fit:contain;
+  filter:drop-shadow(1px 5px 4px rgba(31,42,26,.14));
+  transform:rotate(-9deg);
+  pointer-events:none;
+}
+/* Fine champagne accent, attached to envelope only, not the entire page. */
+.cover .envelope-art::after {
+  border:1px solid rgba(217,194,145,.62);
+  box-shadow:0 0 0 5px rgba(197,173,123,.06),0 0 11px rgba(197,173,123,.12);
+}
+/* Keep the unverified clipart collage disabled. */
+.cover .decor-layer--envelope-petals {display:none !important;}
+@media(max-width:600px) {
+  .cover .cover-castle{opacity:.06;}
+  .cover .envelope-open{width:min(90vw,480px);}
+  .cover .envelope-photo-float{left:35%;width:59%;top:-3%;}
+  .cover .envelope-flower{left:-10%;top:-17%;width:46%;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .cover .envelope-flower{animation:none;}
+}
