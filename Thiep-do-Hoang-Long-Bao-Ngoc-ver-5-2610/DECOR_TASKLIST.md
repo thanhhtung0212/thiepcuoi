@@ -40,3 +40,8 @@ Source of truth: 8 reference screenshots supplied by the owner. No change to mai
 ## Execution record
 - Previous work: `4d6506bd` envelope CSS, `2088c44a` later section CSS. Both code-only; visual signoff absent.
 - Next action: verify floral cutout assets and envelope reference; clean envelope-specific CSS without modifying other sections. Do not advance to task 02 until task 01 is visually validated.
+
+## 2026-10-30 — free Playwright regression (isolated timeline fixture)
+- Ran Chromium/Playwright via `page.set_content` with the corrected timeline CSS logic on 390×844, 430×932 and 1440×900. All 3 isolated checks passed: paper computed `position:absolute`, heading offset 54px, no horizontal overflow; panel height 328px.
+- This **does not** test the deployed website or its full CSS cascade. Actual GitHub/Cloudflare website assets cannot be downloaded into the browser container because outbound DNS is blocked; `file://` navigation is also blocked by administrator. Fixture tests alone cannot close Task 06 or G3/G4.
+- QA patch remains on `decor-free-qa-fixes` pending full visual regression. Avoid deploying without verified free build quota. No metered Browser Rendering used.
