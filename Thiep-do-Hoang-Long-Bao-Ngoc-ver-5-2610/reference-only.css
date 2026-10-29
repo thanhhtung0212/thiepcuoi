@@ -15,3 +15,18 @@
 .timeline-panel .panel-title,.timeline-panel li{color:#405039!important}
 .guestbook-section,.gift-section{background:radial-gradient(ellipse at center,#fffdf7,#f8f1e6)!important;border:1px solid #e6d8bf;border-radius:17px}
 .guestbook-flower,.gift-floral,.timeline-flower{opacity:1;filter:none}
+
+/* Eight reference-specific botanical placements; original main image files retained. */
+.cover .envelope-flower{filter:drop-shadow(0 4px 5px #28382032);transform:rotate(-15deg)}
+.invitation-panel>.panel-flower-left{top:-35px;left:-58px;right:auto;bottom:auto;width:clamp(130px,24vw,205px);height:auto;transform:rotate(-7deg);opacity:1;filter:none}
+.invitation-panel>.ceremony-floral-bottom{position:absolute;right:-39px;bottom:-33px;width:clamp(140px,28vw,215px);height:auto;transform:scaleX(-1);opacity:1;filter:none}
+.wedding-countdown>.countdown-floral{position:absolute;left:-34px;bottom:-24px;width:clamp(120px,25vw,175px);height:auto;filter:none;opacity:1}
+.album-section>.album-floral-left,.album-section>.album-floral-right{position:absolute;bottom:10px;width:clamp(130px,25vw,200px);height:auto;filter:none;opacity:1;z-index:0}
+.album-section>.album-floral-left{left:-28px;transform:none}
+.album-section>.album-floral-right{right:-28px;transform:scaleX(-1)}
+.album-section>.album-viewer,.album-section>.album-thumbs{position:relative;z-index:2}
+.reception-panel>.panel-flower-reception{top:auto;right:auto;bottom:-33px;left:-49px;width:clamp(135px,27vw,205px);height:auto;transform:rotate(-8deg);filter:none;opacity:1}
+.timeline-panel>.timeline-flower{top:auto;left:auto;right:-38px;bottom:-34px;width:clamp(130px,26vw,195px);height:auto;transform:scaleX(-1);filter:none;opacity:1}
+.guestbook-section>.guestbook-flower{position:absolute;top:auto;left:auto;right:-24px;bottom:5px;width:clamp(110px,23vw,170px);height:auto;transform:scaleX(-1);filter:none;opacity:1}
+.gift-section>.gift-floral{position:absolute;right:calc(50% - 155px);bottom:18px;width:clamp(130px,25vw,185px);height:auto;transform:scaleX(-1);filter:none;opacity:1}
+@media(max-width:600px){.invitation-panel>.panel-flower-left{width:128px;left:-40px;top:-25px}.invitation-panel>.ceremony-floral-bottom{width:140px;right:-28px;bottom:-20px}.reception-panel>.panel-flower-reception{width:140px;left:-30px}.timeline-panel>.timeline-flower{width:135px;right:-25px}.album-section>.album-floral-left,.album-section>.album-floral-right{width:130px}}
