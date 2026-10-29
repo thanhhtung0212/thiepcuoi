@@ -135,3 +135,51 @@
 /* Keep the overlay from capturing clicks, and don't replace the original envelope. */
 .decor-layer,.decor-layer::before,.decor-layer::after{pointer-events:none!important}
 @media(max-width:600px){.decor-layer--ceremony-c{width:15%}.decor-layer--album-c,.decor-layer--reception-c,.decor-layer--timeline-c,.decor-layer--gift-c{opacity:.22}.envelope-art .decor-layer--envelope-petals{width:28%}}
+
+
+/* DECOR REFINEMENT — approved deployment, 2026-10-30.
+   Override applied after earlier reference-only rules; existing interactions unchanged. */
+:root {
+  --decor-deep-olive: #414d37;
+  --decor-olive: #59664b;
+  --decor-ivory: #faf6ed;
+  --decor-champagne: #c5ad7b;
+}
+/* Restore nuanced panels; don't flatten existing radial gradients. */
+.burgundy-panel.invitation-panel {
+  background: radial-gradient(ellipse at 50% 34%, #fffdf8 0%, #f8f1e4 100%) !important;
+  border-color: var(--decor-champagne) !important;
+}
+.burgundy-panel.reception-panel {
+  background: radial-gradient(ellipse at 25% 12%, #64724b 0%, #3c4b32 85%) !important;
+  border-color: var(--decor-champagne) !important;
+}
+.burgundy-panel.timeline-panel,
+.album-section,.guestbook-section,.gift-section {
+  background: radial-gradient(ellipse at 50% 30%, #fffdf8 0%, #f8f1e6 100%) !important;
+}
+.wedding-countdown {
+  background: radial-gradient(ellipse at 30% 10%, #697650 0%, #435039 85%) !important;
+}
+/* Keep all decorative overlays noninteractive and behind form/buttons. */
+.decor-layer {pointer-events:none !important; user-select:none;}
+.invitation-panel > .decor-layer,
+.reception-panel > .decor-layer,
+.timeline-panel > .decor-layer {z-index:0;}
+.invitation-panel > :not(.decor-layer):not(.panel-flower):not(.floral-decor),
+.reception-panel > :not(.decor-layer):not(.panel-flower),
+.timeline-panel > :not(.decor-layer):not(.timeline-flower) {
+  position:relative; z-index:2;
+}
+/* Provisional third layers should not duplicate clipart sheets.
+   Re-enable each only once a genuinely transparent botanical cutout is verified. */
+.decor-layer--ceremony-c, .decor-layer--countdown-c,
+.decor-layer--album-c, .decor-layer--reception-c,
+.decor-layer--timeline-c, .decor-layer--wishes-c,
+.decor-layer--gift-c, .decor-layer--envelope-petals {display:none;}
+@media(max-width:600px) {
+ .decor-layer--ceremony-a {width:27%;left:-4%;}
+ .decor-layer--ceremony-b {width:30%;right:-4%;}
+ .decor-layer--album-a,.decor-layer--album-b {width:22%;bottom:-2%;}
+ .decor-layer--wishes-a {width:23%;right:-3%;}
+}
