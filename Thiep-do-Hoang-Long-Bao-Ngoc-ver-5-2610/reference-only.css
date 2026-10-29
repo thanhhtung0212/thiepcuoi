@@ -62,3 +62,14 @@
 .timeline-panel>.timeline-flower{content:url("assets/theme/decor lich trinh ngay cuoi.png")}
 .guestbook-section>.guestbook-flower{content:url("assets/theme/decor loi chuc.png")}
 .gift-section>.gift-floral{content:url("assets/theme/decor hop qua mung.png")}
+
+
+/* Eight section-specific decorations sourced from existing assets/theme. */
+.invitation-panel>.panel-flower-left{content:url("assets/theme/decor le thanh hon.png")}
+.invitation-panel>.ceremony-floral-bottom{content:url("assets/theme/countdown-calla-bouquet-only-v1.png")}
+.wedding-countdown>.countdown-floral{content:url("assets/theme/decor dong ho dem nguoc.png")}
+.album-section>.album-floral-left,.album-section>.album-floral-right{content:url("assets/theme/decor album.png")}
+.reception-panel>.panel-flower-reception{content:url("assets/theme/decor thong tin tiec cuoi.png")}
+.timeline-panel>.timeline-flower{content:url("assets/theme/decor lich trinh ngay cuoi.png")}
+.guestbook-section>.guestbook-flower{content:url("assets/theme/decor loi chuc.png")}
+.gift-section>.gift-floral{content:url("assets/theme/decor hop qua mung.png")}
