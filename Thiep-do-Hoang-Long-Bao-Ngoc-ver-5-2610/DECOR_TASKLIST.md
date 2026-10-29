@@ -29,6 +29,14 @@ Source of truth: 8 reference screenshots supplied by the owner. No change to mai
 - Never claim a screenshot or visual QA was performed if it was not.
 - Never claim all 8 tasks complete based on code changes alone.
 
+## 2026-10-30 — Automated envelope audit (Task 01 only)
+- Confirmed all five referenced envelope files exist in the GitHub `assets/theme` directory: three envelope artworks, `envelope-bouquet-long-olive-v4.png`, and `hero-couple.webp`. The GitHub binary-reading connector cannot inspect PNG alpha; **G2 remains open**.
+- Inspected local cropped reference `envelope_flower_left.png`: it contains ivory background and part of the envelope; it is **not** an isolated floral cutout. Do not upload it as a flower overlay.
+- Found concrete CSS animation defect: `drFloat` animates `transform:translateY(...)` and overrides the bouquet's `rotate(-9deg)`. Fixed with `envelopeCallaFloat`, which preserves rotation and existing animation timing. Removed obsolete envelope CSS declarations; other sections untouched.
+- Ran a **local isolated HTML/CSS smoke test** in Chromium at 390×844 and 1440×900, including reduced-motion behavior: bouquet keeps rotation, pointer-events are disabled, and the isolated mock has no horizontal overflow. This is **not** an actual website visual test, so G3/G4/Task 01 remain open.
+- Cloudflare account lists one Pages project and 20 October deployments. Official Pages Free limit is 500 builds/month; only one further GitHub commit/build is intended. No Browser Rendering API or paid services used.
+- Next: inspect the actual bouquet PNG alpha and screenshot the real envelope using a verified free method, then adjust proportions. Do not advance to Task 02 until validated.
+
 ## Execution record
 - Previous work: `4d6506bd` envelope CSS, `2088c44a` later section CSS. Both code-only; visual signoff absent.
 - Next action: verify floral cutout assets and envelope reference; clean envelope-specific CSS without modifying other sections. Do not advance to task 02 until task 01 is visually validated.

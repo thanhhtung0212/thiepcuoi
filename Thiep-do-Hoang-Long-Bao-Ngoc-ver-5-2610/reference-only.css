@@ -17,7 +17,6 @@
 .guestbook-flower,.gift-floral,.timeline-flower{opacity:1;filter:none}
 
 /* Eight reference-specific botanical placements; original main image files retained. */
-.cover .envelope-flower{filter:drop-shadow(0 4px 5px #28382032);transform:rotate(-15deg)}
 .invitation-panel>.panel-flower-left{top:-35px;left:-58px;right:auto;bottom:auto;width:clamp(130px,24vw,205px);height:auto;transform:rotate(-7deg);opacity:1;filter:none}
 .invitation-panel>.ceremony-floral-bottom{position:absolute;right:-39px;bottom:-33px;width:clamp(140px,28vw,215px);height:auto;transform:scaleX(-1);opacity:1;filter:none}
 .wedding-countdown>.countdown-floral{position:absolute;left:-34px;bottom:-24px;width:clamp(120px,25vw,175px);height:auto;filter:none;opacity:1}
@@ -115,10 +114,9 @@
 .decor-layer--timeline-c{width:17%;height:20%;left:43%;bottom:-5%;background-image:url("assets/theme/Calla Lily Wedding Bouquet Clipart Collection 24.png");opacity:.5}
 .decor-layer--wishes-c{width:14%;height:18%;left:0;bottom:-3%;background-image:url("assets/theme/Calla Lily Wedding Bouquet Clipart Collection 25.png");opacity:.3}
 .decor-layer--gift-c{width:16%;height:22%;left:42%;bottom:0;background-image:url("assets/theme/Calla Lily Wedding Bouquet Clipart Collection 24.png");opacity:.45}
-.envelope-art .decor-layer--envelope-petals{width:35%;height:42%;right:-5%;top:2%;background-image:url("assets/theme/Calla Lily Wedding Bouquet Clipart Collection 24.png");opacity:.7;z-index:2;transform:rotate(25deg)}
 /* Keep the overlay from capturing clicks, and don't replace the original envelope. */
 .decor-layer,.decor-layer::before,.decor-layer::after{pointer-events:none!important}
-@media(max-width:600px){.decor-layer--ceremony-c{width:15%}.decor-layer--album-c,.decor-layer--reception-c,.decor-layer--timeline-c,.decor-layer--gift-c{opacity:.22}.envelope-art .decor-layer--envelope-petals{width:28%}}
+@media(max-width:600px){.decor-layer--ceremony-c{width:15%}.decor-layer--album-c,.decor-layer--reception-c,.decor-layer--timeline-c,.decor-layer--gift-c{opacity:.22}}
 
 
 /* DECOR REFINEMENT — approved deployment, 2026-10-30.
@@ -169,8 +167,15 @@
 }
 
 
+/* Preserve the -9deg bouquet angle throughout the existing float animation.
+   The earlier drFloat keyframes animated transform and silently erased rotate(). */
+@keyframes envelopeCallaFloat {
+  0%,100% { transform:translate3d(0,0,0) rotate(-9deg); }
+  50% { transform:translate3d(0,-7px,0) rotate(-9deg); }
+}
+
 /* TASK 01 / ENVELOPE — isolated art direction.
-   Uses existing olive envelope, couple photograph and transparent calla bouquet.
+   Uses existing olive envelope, couple photograph and calla bouquet (asset alpha still to be verified).
    Preserve JS-driven .is-opening/.is-open animations. No other section changes. */
 .cover {
   background:
@@ -208,6 +213,8 @@
   object-fit:contain;
   filter:drop-shadow(1px 5px 4px rgba(31,42,26,.14));
   transform:rotate(-9deg);
+  transform-origin:50% 50%;
+  animation-name:envelopeCallaFloat;
   pointer-events:none;
 }
 /* Fine champagne accent, attached to envelope only, not the entire page. */
