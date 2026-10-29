@@ -73,3 +73,25 @@
 .timeline-panel>.timeline-flower{content:url("assets/theme/decor lich trinh ngay cuoi.png")}
 .guestbook-section>.guestbook-flower{content:url("assets/theme/decor loi chuc.png")}
 .gift-section>.gift-floral{content:url("assets/theme/decor hop qua mung.png")}
+
+
+/* Layered botanical art. Decoration-only DOM nodes, never interactive. */
+.decor-layer{position:absolute;display:block;z-index:1;pointer-events:none!important;user-select:none;background-repeat:no-repeat;background-size:contain;background-position:center;filter:drop-shadow(0 3px 3px #34402a1c)}
+.invitation-panel,.wedding-countdown,.album-section,.reception-panel,.timeline-panel,.guestbook-section,.gift-section{position:relative;isolation:isolate}
+.decor-layer--ceremony-a{width:37%;height:32%;top:-5%;left:-13%;background-image:url("assets/theme/Cành hoa trắng rủ thanh nhã.png");transform:rotate(-7deg)}
+.decor-layer--ceremony-b{width:46%;height:32%;right:-12%;bottom:-7%;background-image:url("assets/theme/Elegant White Calla Lily Bouquet olive.png");transform:rotate(8deg)}
+.decor-layer--countdown-a{width:28%;height:95%;bottom:-24%;left:-9%;background-image:url("assets/theme/countdown-calla-bouquet-only-v1.png")}
+.decor-layer--countdown-b{width:18%;height:50%;top:-20%;right:2%;background-image:url("assets/theme/Calla Lily Wedding Bouquet Clipart Collection 24.png");opacity:.7;transform:rotate(-20deg)}
+.decor-layer--album-a{width:28%;height:48%;left:-9%;bottom:-11%;background-image:url("assets/theme/Elegant Calla Lily Floral Corner.png")}
+.decor-layer--album-b{width:28%;height:48%;right:-9%;bottom:-11%;background-image:url("assets/theme/Elegant Calla Lily Floral Corner.png");transform:scaleX(-1)}
+.decor-layer--reception-a{width:37%;height:29%;left:-13%;bottom:-6%;background-image:url("assets/theme/Elegant White Calla Lily Bouquet olive.png")}
+.decor-layer--reception-b{width:31%;height:25%;right:-12%;bottom:-5%;background-image:url("assets/theme/Elegant Calla Lily Floral Corner.png");transform:scaleX(-1)}
+.decor-layer--timeline-a{width:40%;height:26%;left:-12%;bottom:-5%;background-image:url("assets/theme/Elegant Calla Lily Floral Corner.png")}
+.decor-layer--timeline-b{width:34%;height:23%;right:-11%;bottom:-6%;background-image:url("assets/theme/Elegant White Calla Lily Bouquet olive.png");transform:scaleX(-1)}
+.decor-layer--wishes-a{width:35%;height:38%;right:-8%;bottom:-7%;background-image:url("assets/theme/Elegant Calla Lily Floral Corner.png");transform:scaleX(-1)}
+.decor-layer--wishes-b{width:20%;height:25%;left:-6%;top:-5%;background-image:url("assets/theme/Botanical calla lily frame transparent 12.png");opacity:.75}
+.decor-layer--gift-a{width:35%;height:42%;left:1%;bottom:0;background-image:url("assets/theme/White Calla Lily Bouquet Cutout.png")}
+.decor-layer--gift-b{width:31%;height:40%;right:0;bottom:0;background-image:url("assets/theme/Elegant Calla Lily Floral Corner.png");transform:scaleX(-1)}
+/* Existing content and clickable controls stay above botanical artwork. */
+.wedding-countdown>*:not(.decor-layer):not(.floral-decor),.album-section>*:not(.decor-layer):not(.floral-decor),.guestbook-section>*:not(.decor-layer):not(.guestbook-art),.gift-section>*:not(.decor-layer):not(.floral-decor){position:relative;z-index:2}
+@media(max-width:600px){.decor-layer--ceremony-a{left:-8%;width:36%}.decor-layer--ceremony-b{right:-9%;width:38%}.decor-layer--album-a,.decor-layer--album-b{width:30%;height:30%;bottom:-3%}.decor-layer--wishes-a{width:31%}.decor-layer--gift-a,.decor-layer--gift-b{width:30%}}
