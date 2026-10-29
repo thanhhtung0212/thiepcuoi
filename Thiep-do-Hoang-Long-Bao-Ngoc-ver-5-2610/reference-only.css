@@ -121,3 +121,17 @@
 .decor-layer--wishes-a{width:22%;right:-3%}
 .decor-layer--gift-a,.decor-layer--gift-b{width:23%;height:26%}
 }
+
+
+/* Third, independent floral layer per section. Every layer can be repositioned separately. */
+.decor-layer--ceremony-c{width:18%;height:18%;right:3%;top:1%;background-image:url("assets/theme/Botanical calla lily frame transparent 12.png");opacity:.45;transform:rotate(12deg)}
+.decor-layer--countdown-c{width:12%;height:44%;right:7%;bottom:-12%;background-image:url("assets/theme/Calla Lily Wedding Bouquet Clipart Collection 25.png");opacity:.7;transform:rotate(-16deg)}
+.decor-layer--album-c{width:17%;height:20%;left:42%;bottom:-7%;background-image:url("assets/theme/Calla Lily Wedding Bouquet Clipart Collection 24.png");opacity:.32}
+.decor-layer--reception-c{width:17%;height:22%;left:42%;bottom:-7%;background-image:url("assets/theme/Calla Lily Wedding Bouquet Clipart Collection 25.png");opacity:.5}
+.decor-layer--timeline-c{width:17%;height:20%;left:43%;bottom:-5%;background-image:url("assets/theme/Calla Lily Wedding Bouquet Clipart Collection 24.png");opacity:.5}
+.decor-layer--wishes-c{width:14%;height:18%;left:0;bottom:-3%;background-image:url("assets/theme/Calla Lily Wedding Bouquet Clipart Collection 25.png");opacity:.3}
+.decor-layer--gift-c{width:16%;height:22%;left:42%;bottom:0;background-image:url("assets/theme/Calla Lily Wedding Bouquet Clipart Collection 24.png");opacity:.45}
+.envelope-art .decor-layer--envelope-petals{width:35%;height:42%;right:-5%;top:2%;background-image:url("assets/theme/Calla Lily Wedding Bouquet Clipart Collection 24.png");opacity:.7;z-index:2;transform:rotate(25deg)}
+/* Keep the overlay from capturing clicks, and don't replace the original envelope. */
+.decor-layer,.decor-layer::before,.decor-layer::after{pointer-events:none!important}
+@media(max-width:600px){.decor-layer--ceremony-c{width:15%}.decor-layer--album-c,.decor-layer--reception-c,.decor-layer--timeline-c,.decor-layer--gift-c{opacity:.22}.envelope-art .decor-layer--envelope-petals{width:28%}}
