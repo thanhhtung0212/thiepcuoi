@@ -39,3 +39,16 @@
  #site .guestbook-flower{width:120px;right:-24px;bottom:0}
  #site .gift-floral{width:140px;right:calc(50% - 140px)}
 }
+
+
+/* Refined matching: ivory ceremony, botanical framing, olive reception, pale timeline. */
+#site .wedding-info{background:radial-gradient(ellipse at center,#fffdf8 15%,#f6f0e4 100%)}
+#site .invitation-panel{box-shadow:0 12px 32px #72634325,inset 0 0 0 7px #fffdf666}
+#site .invitation-panel .panel-title{letter-spacing:.075em}
+#site .invitation-panel .couple-names h3{color:#43503a}
+#site .wedding-countdown{background:radial-gradient(ellipse at 30% 20%,#73805a,#4b593d 72%,#3d4932)}
+#site .reception-panel{box-shadow:0 12px 25px #37452c3b,inset 0 0 0 5px #d6c38b18}
+#site .album-section .album-card{border:2px solid #fffdf8;box-shadow:0 12px 24px #3d46352e}
+#site .timeline-panel .timeline-dot::after{background:#536041;border:2px solid #c6aa77}
+#site .gift-section .gift-envelopes::after{background:radial-gradient(circle at 35% 25%,#697550,#455438 80%)}
+#site .guestbook-section .wish-submit{background:linear-gradient(120deg,#586543,#3e4c32)}
