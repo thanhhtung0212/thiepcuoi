@@ -30,3 +30,23 @@
 .guestbook-section>.guestbook-flower{position:absolute;top:auto;left:auto;right:-24px;bottom:5px;width:clamp(110px,23vw,170px);height:auto;transform:scaleX(-1);filter:none;opacity:1}
 .gift-section>.gift-floral{position:absolute;right:calc(50% - 155px);bottom:18px;width:clamp(130px,25vw,185px);height:auto;transform:scaleX(-1);filter:none;opacity:1}
 @media(max-width:600px){.invitation-panel>.panel-flower-left{width:128px;left:-40px;top:-25px}.invitation-panel>.ceremony-floral-bottom{width:140px;right:-28px;bottom:-20px}.reception-panel>.panel-flower-reception{width:140px;left:-30px}.timeline-panel>.timeline-flower{width:135px;right:-25px}.album-section>.album-floral-left,.album-section>.album-floral-right{width:130px}}
+
+
+/* Detailed reference pass: background grain, golden hairlines, botanical layering. */
+.invitation-panel,.reception-panel,.timeline-panel{isolation:isolate}
+.invitation-panel:before,.timeline-panel:before{opacity:.12!important;mix-blend-mode:multiply}
+.reception-panel:before{opacity:.08!important;mix-blend-mode:soft-light}
+.invitation-panel:after,.reception-panel:after,.timeline-panel:after{content:"";position:absolute;inset:7px;border:1px solid #c8b17b55;border-radius:inherit;pointer-events:none;z-index:0}
+.invitation-panel .panel-title,.invitation-panel .announce,.invitation-panel .couple-names,.invitation-panel .ceremony-info,.invitation-panel .family-grid{color:#3d4b36!important}
+.invitation-panel .couple-names h3{color:#3e4d36!important}
+.invitation-panel .ceremony-date,.invitation-panel .lunar-date{color:#3e4b36!important}
+.reception-panel .panel-title,.reception-panel h3,.reception-panel .lunar-date{color:#f9f0d8!important}
+.timeline-panel .panel-title,.timeline-panel h3,.timeline-panel p,.timeline-panel span{color:#405039}
+.wedding-countdown .countdown-unit strong{color:#f7edcf}
+.wedding-countdown .countdown-unit span{color:#f8efd8}
+.album-section .album-stack{filter:drop-shadow(0 8px 12px #5e61452b)}
+.album-section .album-arrow{background:#fffdf6;color:#4c573d;border:1px solid #e2d7bd}
+.guestbook-section input,.guestbook-section textarea{background:#fffefa;border:1px solid #cfc4b3;border-radius:7px}
+.guestbook-section button[type="submit"]{background:#4c5a3e;color:#fff8e8}
+.gift-section .gift-envelopes{filter:drop-shadow(0 8px 11px #414d3440)}
+@media(max-width:600px){.invitation-panel:after,.reception-panel:after,.timeline-panel:after{inset:5px}.album-section .album-stack{filter:drop-shadow(0 5px 8px #5e61452b)}}
