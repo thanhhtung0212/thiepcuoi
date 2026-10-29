@@ -50,3 +50,15 @@
 .guestbook-section button[type="submit"]{background:#4c5a3e;color:#fff8e8}
 .gift-section .gift-envelopes{filter:drop-shadow(0 8px 11px #414d3440)}
 @media(max-width:600px){.invitation-panel:after,.reception-panel:after,.timeline-panel:after{inset:5px}.album-section .album-stack{filter:drop-shadow(0 5px 8px #5e61452b)}}
+
+
+/* Asset mapping: user-supplied /assets/theme/ collection; visual changes only.
+   CSS content replaces decorative <img> rendering, not src attributes or JS. */
+.invitation-panel>.panel-flower-left{content:url("assets/theme/decor le thanh hon.png")}
+.invitation-panel>.ceremony-floral-bottom{content:url("assets/theme/decor le thanh hon.png")}
+.wedding-countdown>.countdown-floral{content:url("assets/theme/decor dong ho dem nguoc.png")}
+.album-section>.album-floral-left,.album-section>.album-floral-right{content:url("assets/theme/decor album.png")}
+.reception-panel>.panel-flower-reception{content:url("assets/theme/decor thong tin tiec cuoi.png")}
+.timeline-panel>.timeline-flower{content:url("assets/theme/decor lich trinh ngay cuoi.png")}
+.guestbook-section>.guestbook-flower{content:url("assets/theme/decor loi chuc.png")}
+.gift-section>.gift-floral{content:url("assets/theme/decor hop qua mung.png")}
