@@ -95,3 +95,29 @@
 /* Existing content and clickable controls stay above botanical artwork. */
 .wedding-countdown>*:not(.decor-layer):not(.floral-decor),.album-section>*:not(.decor-layer):not(.floral-decor),.guestbook-section>*:not(.decor-layer):not(.guestbook-art),.gift-section>*:not(.decor-layer):not(.floral-decor){position:relative;z-index:2}
 @media(max-width:600px){.decor-layer--ceremony-a{left:-8%;width:36%}.decor-layer--ceremony-b{right:-9%;width:38%}.decor-layer--album-a,.decor-layer--album-b{width:30%;height:30%;bottom:-3%}.decor-layer--wishes-a{width:31%}.decor-layer--gift-a,.decor-layer--gift-b{width:30%}}
+
+
+/* Reference palette + restrained floral composition, after asset inventory.
+   Cream paper / olive / champagne gold; never touch event content or JS. */
+:root{--decor-olive-deep:#414d37;--decor-olive:#59664b;--decor-olive-soft:#849075;--decor-cream:#faf6ed;--decor-paper:#fffdf7;--decor-gold:#c5ad7b}
+.invitation-shell{background-color:var(--decor-cream)}
+.invitation-panel,.timeline-panel,.album-section,.guestbook-section,.gift-section{background-color:var(--decor-paper)!important}
+.reception-panel,.wedding-countdown{background-color:var(--decor-olive-deep)!important}
+.invitation-panel,.timeline-panel,.reception-panel{border-color:var(--decor-gold)!important}
+.decor-layer{background-size:contain;background-repeat:no-repeat;pointer-events:none;max-width:none}
+.decor-layer--ceremony-a{width:31%;height:28%;left:-8%;top:-3%;opacity:.95}
+.decor-layer--ceremony-b{width:36%;height:26%;right:-7%;bottom:-4%;opacity:.96}
+.decor-layer--countdown-a{width:23%;height:88%;left:-6%;bottom:-22%}
+.decor-layer--countdown-b{width:11%;height:35%;right:2%;top:-12%;opacity:.48}
+.decor-layer--album-a,.decor-layer--album-b{width:22%;height:37%;bottom:-7%;opacity:.94}
+.decor-layer--reception-a,.decor-layer--reception-b{width:27%;height:25%;bottom:-4%}
+.decor-layer--timeline-a,.decor-layer--timeline-b{width:28%;height:23%;bottom:-5%}
+.decor-layer--wishes-a{width:24%;height:27%;right:-4%;bottom:-4%}
+.decor-layer--wishes-b{opacity:.28;width:14%;height:18%}
+.decor-layer--gift-a,.decor-layer--gift-b{width:25%;height:31%;bottom:0}
+@media(max-width:600px){
+.decor-layer--ceremony-a{width:27%;left:-5%}.decor-layer--ceremony-b{width:30%;right:-5%}
+.decor-layer--album-a,.decor-layer--album-b{width:23%;height:25%;bottom:-2%}
+.decor-layer--wishes-a{width:22%;right:-3%}
+.decor-layer--gift-a,.decor-layer--gift-b{width:23%;height:26%}
+}
