@@ -1,0 +1,66 @@
+/* Eight-image reference decor overlay. Functional elements remain live and untouched. */
+:root{--olive:#4d583c;--olive-deep:#38452d;--ivory:#fbf7ed;--champagne:#c8b48b}
+.invitation-shell{background:#faf6eb}
+.paper-grain::before{opacity:.33}
+#site .wedding-info,#site .album-section,#site .reception-section,#site .timeline-section,#site .guestbook-section,#site .gift-section{isolation:isolate}
+#site .invitation-panel{background:linear-gradient(120deg,#f9f4e8,#fffdf6 48%,#f8f1e3);color:#3f4b35;border:1px solid #d3b783;border-radius:19px;box-shadow:0 8px 26px #4e553526}
+#site .invitation-panel .panel-title,#site .invitation-panel .announce,#site .invitation-panel .couple-names,#site .invitation-panel .ceremony-info,#site .invitation-panel .family-grid{color:#3f4b35}
+#site .invitation-panel::before{opacity:.1}
+#site .invitation-panel>.panel-flower-left{width:230px;top:-55px;left:-93px;transform:rotate(-10deg);filter:none;opacity:1}
+#site .invitation-panel>.ceremony-floral-bottom{width:235px;right:-57px;bottom:-50px;transform:scaleX(-1);filter:none;opacity:1}
+#site .family-divider,#site .invitation-panel .date-divider{background:#cebea1}
+#site .wedding-countdown{background:linear-gradient(145deg,#68724c,#48563a 58%,#3c4932);border:1px solid #bda875;border-radius:16px;box-shadow:0 8px 23px #424d3440}
+#site .countdown-unit{background:#f5ebcc1c;border:1px solid #d9ca9829;border-radius:8px}
+#site .wedding-countdown>.countdown-floral{width:155px;left:-48px;bottom:-35px;opacity:1;filter:none}
+#site .wedding-countdown h2{color:#fff4d8}
+#site .album-section{border:1px solid #e1d3b6;border-radius:18px;background:linear-gradient(#fffbf3,#f7f0e4);box-shadow:0 5px 22px #6d69451a}
+#site .album-floral-left{left:-35px;bottom:-25px;width:205px;opacity:1;filter:none}
+#site .album-floral-right{right:-35px;bottom:-25px;width:205px;opacity:1;filter:none;transform:scaleX(-1)}
+#site .reception-panel{background:linear-gradient(130deg,#566441,#3c4b32);border:1px solid #c5a875;border-radius:17px;box-shadow:0 7px 25px #414b3240;color:#faf2db}
+#site .reception-panel>.panel-flower-reception{left:-88px;bottom:-55px;width:220px;opacity:1;filter:none}
+#site .timeline-panel{background:linear-gradient(160deg,#fffaf0,#faf5e9)!important;border:1px solid #d9bb8c!important;color:#3d4936!important;border-radius:17px}
+#site .timeline-panel .panel-title,#site .timeline-panel .timeline,#site .timeline-panel li{color:#3d4936!important}
+#site .timeline-panel>.timeline-flower{right:-54px;bottom:-42px;width:210px;opacity:1;filter:none}
+#site .timeline-paper{opacity:.17}
+#site .guestbook-section{background:linear-gradient(145deg,#fcf8ef,#fffdf7);border:1px solid #e4d6bd;border-radius:17px}
+#site .guestbook-section::before{background:transparent;box-shadow:none}
+#site .guestbook-flower{right:-50px;bottom:-10px;width:175px;opacity:1;filter:none}
+#site .gift-section{background:linear-gradient(135deg,#fcf8ed,#f9f2e5);border:1px solid #e7dbc4;border-radius:17px}
+#site .gift-envelopes::after{background:#50603e;border-color:#e1c88c;box-shadow:0 12px 23px #3f4c2e32}
+#site .gift-floral{right:calc(50% - 165px);bottom:17px;width:160px;opacity:1;filter:none}
+#site .album-arrow,#site .wish-submit,#site .rsvp-link{position:relative;z-index:3}
+@media(max-width:650px){
+ #site .invitation-panel>.panel-flower-left{width:155px;left:-60px;top:-38px}
+ #site .invitation-panel>.ceremony-floral-bottom{width:165px;right:-42px;bottom:-35px}
+ #site .wedding-countdown>.countdown-floral{width:112px;left:-36px;bottom:-22px}
+ #site .album-floral-left,#site .album-floral-right{width:155px;bottom:-15px}
+ #site .reception-panel>.panel-flower-reception{width:155px;left:-45px;bottom:-34px}
+ #site .timeline-panel>.timeline-flower{width:145px;right:-37px;bottom:-29px}
+ #site .guestbook-flower{width:120px;right:-24px;bottom:0}
+ #site .gift-floral{width:140px;right:calc(50% - 140px)}
+}
+
+
+/* Refined matching: ivory ceremony, botanical framing, olive reception, pale timeline. */
+#site .wedding-info{background:radial-gradient(ellipse at center,#fffdf8 15%,#f6f0e4 100%)}
+#site .invitation-panel{box-shadow:0 12px 32px #72634325,inset 0 0 0 7px #fffdf666}
+#site .invitation-panel .panel-title{letter-spacing:.075em}
+#site .invitation-panel .couple-names h3{color:#43503a}
+#site .wedding-countdown{background:radial-gradient(ellipse at 30% 20%,#73805a,#4b593d 72%,#3d4932)}
+#site .reception-panel{box-shadow:0 12px 25px #37452c3b,inset 0 0 0 5px #d6c38b18}
+#site .album-section .album-card{border:2px solid #fffdf8;box-shadow:0 12px 24px #3d46352e}
+#site .timeline-panel .timeline-dot::after{background:#536041;border:2px solid #c6aa77}
+#site .gift-section .gift-envelopes::after{background:radial-gradient(circle at 35% 25%,#697550,#455438 80%)}
+#site .guestbook-section .wish-submit{background:linear-gradient(120deg,#586543,#3e4c32)}
+
+/* Section-specific existing botanical art from the source repository. */
+#site .invitation-panel>.panel-flower-left{width:180px;top:-42px;left:-58px;transform:none;object-fit:contain}
+#site .invitation-panel>.ceremony-floral-bottom{width:180px;right:-40px;bottom:-30px;transform:rotate(180deg)}
+#site .wedding-countdown>.countdown-floral{width:150px;left:-30px;bottom:-28px}
+#site .album-floral-left{width:175px;left:-28px;bottom:-18px}
+#site .album-floral-right{width:175px;right:-28px;bottom:-18px;transform:scaleX(-1)}
+#site .reception-panel>.panel-flower-reception{width:190px;left:-47px;bottom:-38px;transform:none}
+#site .timeline-panel>.timeline-flower{width:185px;right:-38px;bottom:-30px;transform:scaleX(-1)}
+#site .guestbook-flower{width:145px;right:-28px;bottom:-8px;transform:scaleX(-1)}
+#site .gift-floral{width:155px;right:calc(50% - 160px);bottom:8px;transform:none}
+@media(max-width:420px){#site .invitation-panel>.panel-flower-left{width:125px;left:-37px}#site .invitation-panel>.ceremony-floral-bottom{width:130px;right:-25px}#site .reception-panel>.panel-flower-reception{width:145px}#site .timeline-panel>.timeline-flower{width:145px}}
