@@ -54,25 +54,9 @@
 
 /* Asset mapping: user-supplied /assets/theme/ collection; visual changes only.
    CSS content replaces decorative <img> rendering, not src attributes or JS. */
-.invitation-panel>.panel-flower-left{content:url("assets/theme/decor le thanh hon.png")}
-.invitation-panel>.ceremony-floral-bottom{content:url("assets/theme/decor le thanh hon.png")}
-.wedding-countdown>.countdown-floral{content:url("assets/theme/decor dong ho dem nguoc.png")}
-.album-section>.album-floral-left,.album-section>.album-floral-right{content:url("assets/theme/decor album.png")}
-.reception-panel>.panel-flower-reception{content:url("assets/theme/decor thong tin tiec cuoi.png")}
-.timeline-panel>.timeline-flower{content:url("assets/theme/decor lich trinh ngay cuoi.png")}
-.guestbook-section>.guestbook-flower{content:url("assets/theme/decor loi chuc.png")}
-.gift-section>.gift-floral{content:url("assets/theme/decor hop qua mung.png")}
 
 
 /* Eight section-specific decorations sourced from existing assets/theme. */
-.invitation-panel>.panel-flower-left{content:url("assets/theme/decor le thanh hon.png")}
-.invitation-panel>.ceremony-floral-bottom{content:url("assets/theme/countdown-calla-bouquet-only-v1.png")}
-.wedding-countdown>.countdown-floral{content:url("assets/theme/decor dong ho dem nguoc.png")}
-.album-section>.album-floral-left,.album-section>.album-floral-right{content:url("assets/theme/decor album.png")}
-.reception-panel>.panel-flower-reception{content:url("assets/theme/decor thong tin tiec cuoi.png")}
-.timeline-panel>.timeline-flower{content:url("assets/theme/decor lich trinh ngay cuoi.png")}
-.guestbook-section>.guestbook-flower{content:url("assets/theme/decor loi chuc.png")}
-.gift-section>.gift-floral{content:url("assets/theme/decor hop qua mung.png")}
 
 
 /* Layered botanical art. Decoration-only DOM nodes, never interactive. */
@@ -242,3 +226,50 @@
 @media(prefers-reduced-motion:reduce) {
   .cover .envelope-flower{animation:none;}
 }
+
+/* TASK 02 / Ceremony: use independent botanical assets, avoid full-frame art. */
+.invitation-panel>.panel-flower-left{content:normal;top:-5%;left:-9%;width:34%;max-width:190px;transform:rotate(-8deg);opacity:.94}
+.invitation-panel>.ceremony-floral-bottom{content:normal;right:-7%;bottom:-5%;width:39%;max-width:215px;transform:scaleX(-1);opacity:.95}
+.invitation-panel>.decor-layer--ceremony-a,.invitation-panel>.decor-layer--ceremony-b{display:none}
+.invitation-panel .panel-title,.invitation-panel .ceremony-info,.invitation-panel .family-grid{position:relative;z-index:3}
+
+/* TASK 03 / Countdown: use independent botanical assets, avoid full-frame art. */
+.wedding-countdown>.countdown-floral{content:normal;left:-7%;bottom:-12%;width:28%;max-width:180px}
+.wedding-countdown>.decor-layer--countdown-a{display:none}
+.wedding-countdown>.decor-layer--countdown-b{display:none}
+.wedding-countdown .countdown-grid{position:relative;z-index:3}
+.wedding-countdown .countdown-unit{background:rgba(247,239,213,.11)!important;border:1px solid rgba(247,239,213,.26)!important}
+
+/* TASK 04 / Album: use independent botanical assets, avoid full-frame art. */
+.album-section>.album-floral-left,.album-section>.album-floral-right{content:normal;width:24%;max-width:180px;bottom:-3%;opacity:.92}
+.album-section>.album-floral-left{left:-5%}
+.album-section>.album-floral-right{right:-5%;transform:scaleX(-1)}
+.album-section>.decor-layer--album-a,.album-section>.decor-layer--album-b{display:none}
+.album-section .album-viewer,.album-section .album-thumbs{position:relative;z-index:3}
+
+/* TASK 05 / Reception: use independent botanical assets, avoid full-frame art. */
+.reception-panel>.panel-flower-reception{content:normal;left:-8%;bottom:-4%;width:33%;max-width:190px;opacity:.95}
+.reception-panel>.decor-layer--reception-a{display:none}
+.reception-panel>.decor-layer--reception-b{width:27%;right:-7%;bottom:-5%;opacity:.8}
+.reception-panel .panel-title,.reception-panel .reception-content,.reception-panel a,.reception-panel button{position:relative;z-index:3}
+
+/* TASK 06 / Timeline: use independent botanical assets, avoid full-frame art. */
+.timeline-panel>.timeline-flower{content:normal;right:-7%;bottom:-5%;width:30%;max-width:180px}
+.timeline-panel>.decor-layer--timeline-a{width:25%;left:-7%;bottom:-5%;opacity:.78}
+.timeline-panel>.decor-layer--timeline-b{display:none}
+.timeline-panel .timeline-list,.timeline-panel .timeline-content{position:relative;z-index:3}
+
+/* TASK 07 / Wishes: use independent botanical assets, avoid full-frame art. */
+.guestbook-section>.guestbook-flower{content:normal;right:-4%;bottom:-3%;width:25%;max-width:150px}
+.guestbook-section>.decor-layer--wishes-a,.guestbook-section>.decor-layer--wishes-b{display:none}
+.guestbook-section form,.guestbook-section button,.guestbook-section input,.guestbook-section textarea{position:relative;z-index:3}
+
+/* TASK 08 / Gifts: use independent botanical assets, avoid full-frame art. */
+.gift-section>.gift-floral{content:normal;right:3%;bottom:0;width:27%;max-width:175px}
+.gift-section>.decor-layer--gift-a{width:24%;left:1%;bottom:0;opacity:.82}
+.gift-section>.decor-layer--gift-b{display:none}
+.gift-section button,.gift-section .gift-envelopes,.gift-section .gift-content{position:relative;z-index:3}
+
+/* Shared accessibility: flowers never intercept controls; prevent horizontal overspill. */
+.decor-layer,.floral-decor,.panel-flower{pointer-events:none!important}
+@media(max-width:600px){.invitation-panel>.panel-flower-left{width:31%}.invitation-panel>.ceremony-floral-bottom{width:34%}.wedding-countdown>.countdown-floral{width:27%}.album-section>.album-floral-left,.album-section>.album-floral-right{width:22%}.reception-panel>.panel-flower-reception{width:29%}.timeline-panel>.timeline-flower{width:27%}.guestbook-section>.guestbook-flower{width:22%}.gift-section>.gift-floral{width:24%}}
