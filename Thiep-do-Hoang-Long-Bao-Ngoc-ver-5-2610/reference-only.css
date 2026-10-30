@@ -286,3 +286,22 @@
    making the full-height image participate in layout and pushing schedule
    heading/items below a huge empty area on mobile. */
 .timeline-panel > .timeline-paper {position:absolute!important;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+
+/* TASK 01 / ENVELOPE STATE GEOMETRY — 2026-10-31
+   style.css's more-specific .cover.is-open/.is-opening selectors set
+   top:5%, width:60.4%, left:-12%, rotate:22deg; the existing reveal/pulse
+   keyframes also rotate(-22deg). Together they straighten the bouquet
+   and make it jump in size/position when the envelope opens.
+   Keep the established -9deg bouquet angle without replacing the JS
+   states, the reveal/pulse keyframes, or the wedding photographs. */
+.cover.is-opening .envelope-flower,
+.cover.is-open .envelope-flower {
+  top:-19%;
+  left:-10%;
+  width:46%;
+  rotate:13deg; /* 13deg + animated transform rotate(-22deg) = -9deg */
+}
+@media(max-width:600px) {
+  .cover.is-opening .envelope-flower,
+  .cover.is-open .envelope-flower {top:-17%}
+}
